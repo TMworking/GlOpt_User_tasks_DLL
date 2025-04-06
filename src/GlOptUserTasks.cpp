@@ -29,29 +29,20 @@ int GetCountCondition() {
 	return tasks[currentTask - 1].getConditionsCount();
 }
 
-void GetGlobalMin(double* out) {
-	const double* src = tasks[currentTask - 1].getMinPoint();
-	int dim = GetDim();
-	for (int i = 0; i < dim; ++i)
-		out[i] = src[i];
+double* GetGlobalMin() {
+	return tasks[currentTask - 1].getMinPoint();
 }
 
 double GetSolution() {
 	return tasks[currentTask - 1].getSolutionValue();
 }
 
-void GetLeftBorder(double* out) {
-	const double* src = tasks[currentTask - 1].getLeftBorder();
-	int dim = GetDim();
-	for (int i = 0; i < dim; ++i)
-		out[i] = src[i];
+double* GetLeftBorder() {
+	return tasks[currentTask - 1].getLeftBorder();
 }
 
-void GetRightBorder(double* out) {
-	const double* src = tasks[currentTask - 1].getRightBorder();
-	int dim = GetDim();
-	for (int i = 0; i < dim; ++i)
-		out[i] = src[i];
+double* GetRightBorder() {
+	return tasks[currentTask - 1].getRightBorder();
 }
 
 void GetTaskValues(double* res, const double* x) {

@@ -26,10 +26,10 @@ extern "C" {
     GLOPT_API void SetUserTaskNumber(int taskNumber);
     GLOPT_API int GetDim();
     GLOPT_API int GetCountCondition();
-    GLOPT_API void GetGlobalMin(double* out);
+    GLOPT_API double* GetGlobalMin();
     GLOPT_API double GetSolution();
-    GLOPT_API void GetLeftBorder(double* out);
-    GLOPT_API void GetRightBorder(double* out);
+    GLOPT_API double* GetLeftBorder();
+    GLOPT_API double* GetRightBorder();
     GLOPT_API void GetTaskValues(double* res, const double* x);
     GLOPT_API void GetTaskGradients(double* res, const double* x);
 }
